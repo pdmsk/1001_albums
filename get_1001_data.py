@@ -34,8 +34,8 @@ def get_albums(project_id):
                 'releaseDate': int(album['releaseDate']),
                 'global_rating': alb_dict['globalRating']
             }
+            albums_data.append(album_info)
         except Exception as e:
             logging.error(f"Failed to get album info for {album}: {e}")
-        albums_data.append(album_info)
     return albums_data
 
